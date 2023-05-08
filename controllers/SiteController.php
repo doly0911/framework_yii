@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\EntryForm;
 
 class SiteController extends Controller
 {
@@ -124,5 +125,17 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionEntry(){
+        //se crea un objeto del modelo EntryForm
+        $model = new EntryForm;
+
+        //trae los datos de la vista y los valida
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+           return $this->render('basic_form', ['model' => $model]);
+        } else {
+            return $this->render('entry', ['model' => $model]);
+        }
     }
 }
