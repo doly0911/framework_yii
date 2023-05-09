@@ -52,7 +52,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     )
                     . Html::endForm()
                     . '</li>',
-            ['label' => 'Form', 'url' => ['/site/entry']]
+            ['label' => 'Form', 'url' => ['/site/entry']],            
+            ['label' => 'Country BD', 'url' => ['/country/index']],
         ]
     ]);
     NavBar::end();

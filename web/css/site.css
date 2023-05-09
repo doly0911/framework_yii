@@ -86,3 +86,25 @@ a.desc:after {
 .form-group {
     margin-bottom: 1rem;
 }
+
+/* Pagination Styles */
+.pagination li a, .pagination li span {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+.pagination li.active a {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+}
+
+.pagination li.disabled a, .pagination li.disabled span {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #aaa;
+}
